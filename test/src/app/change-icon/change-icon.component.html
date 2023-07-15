@@ -1,2 +1,8 @@
-<button (click)="getIcon()">Push Me!</button>
-<fa-icon *ngIf="randomIcon" [icon]="randomIcon" size="6x"></fa-icon>
+<ng-container *ngIf="progressCounter < 100; then loader; else btn"></ng-container>
+<ng-template #loader><progress max="100" [value]="progressCounter">Loading...</progress></ng-template>
+<ng-template #btn
+  ><button class="get-icon" (click)="getIcon()">
+    <fa-icon *ngIf="randomIcon" [icon]="randomIcon" size="8x"></fa-icon>
+    Push Me!
+  </button>
+</ng-template>
