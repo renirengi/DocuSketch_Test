@@ -97,6 +97,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/test",
+            "netlifyToken": "6e223dca-064c-4eb3-8503-14fbfade722e",
+            "siteId": "https://clinquant-pothos-2415c5.netlify.app/"
+          }
         }
       }
     }
